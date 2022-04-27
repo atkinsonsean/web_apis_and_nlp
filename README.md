@@ -1,15 +1,16 @@
-# WEB APIS AND NLP: A REDDIT CLASSIFICATION CHALLENGE
+# Web APIs and NLP: A Reddit Classification Challenge
 
-# TABLE OF CONTENTS
+# Table of Contents
 <a id='table_of_contents'></a><br>
 [Executive Summary](#section_1)<br>
 [Problem Statement](#section_2)<br>
 [Data Collection](#section_3)<br>
 [Data Cleaning and EDA](#section_4)<br>
 [Models and Conclusion](#section_5)<br>
+[Datasets and Libraries Used](#section_6)<br>
 
 <a id='section_1'></a>
-# EXECUTIVE SUMMARY
+# Executive Summary
 
 Is there a fundamental difference between fans of rival teams?
 
@@ -29,7 +30,7 @@ This project contains two main aspects:
 
 
 <a id='section_2'></a>
-# PROBLEM STATEMENT
+# Problem Statement
 [(Back to table of contents)](#table_of_contents)<br>
 
 Is it possible to create a binary classification model that can accurately distinguish between posts in rival subreddits? 
@@ -57,7 +58,7 @@ Why not?
 
 
 <a id='section_3'></a>
-# DATA COLLECTION
+# Data Collection
 [(Back to table of contents)](#table_of_contents)<br>
 
 Using Pushshift's API and the Python's request library, 57, 908 Reddit submissions were collected. 29, 010 from r/LiverpoolFC. 28, 889 from r/Everton.
@@ -66,7 +67,7 @@ There was also around 60,000 comments collected, with an approximate equal distr
 
 
 <a id='section_4'></a>
-# DATA CLEANING AND EDA
+# Data Cleaning and EDA
 [(Back to table of contents)](#table_of_contents)<br>
 
 Outside of removing duplicate rows and imputing some values, initial data cleaning was minimal.
@@ -85,7 +86,7 @@ These features were:
 - sentiment (a score giving to a piece of writing to determine whether it's positive, negative, or neutral)
 
 <a id='section_5'></a>
-# MODELS AND CONCLUSION
+# Models and Conclusion
 [(Back to table of contents)](#table_of_contents)<br>
 
 |Model|Parameters|Training Score|Test Score|Precision|Recall|F1 Score|Specificity|
@@ -108,3 +109,12 @@ While it can't be denied that overfit was an issue, what you can't see from the 
 While on the surface 57,000 observations may not seem like a lot of data, from the processing power I had available to me it proved to be incredibly difficult to hypertune the parameters of my models due to how long they would take to run.
 
 Nonetheless, I'm quite happy with the results and I believe they speak to that rival sports fans aren't as different as they think they are.
+
+<a id='section_5'></a>
+# Datasets and Libraries Used
+[(Back to table of contents)](#table_of_contents)<br>
+
+<b>Dataset:</b> 
+- Custom Reddit submissions dataset containing 57,908 retrieved using Pushshift’s API.
+
+<b>Libraries:</b>: bs4, matplotlib, nltk, pandas, random, re, requests, seaborn, sklearn, time, and wordcloud.
